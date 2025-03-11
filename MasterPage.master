@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+            height: 755px;
+        }
+        .style2
+        {
+            height: 104px;
+        }
+        .style3
+        {
+            height: 66px;
+        }
+        .style4
+        {
+            height: 38px;
+        }
+        .style5
+        {
+            height: 44px;
+        }
+    </style>
+</head>
+<body style="height: 450px">
+    <form id="form1" runat="server">
+    <div style="height: 450px">
+        <table class="style1">
+            <tr>
+                <td bgcolor="#66CCFF" class="style2">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Font-Size="XX-Large" 
+                        Text="Tours And Travels Management System"></asp:Label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:HyperLink ID="HyperLink1" runat="server" 
+                        Font-Underline="True" NavigateUrl="~/Login.aspx">Log In</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td class="style4">
+                    <asp:Menu ID="Menu1" runat="server" Height="55px" Orientation="Horizontal" 
+                        style="margin-top: 0px" Width="1322px" Font-Size="X-Large" 
+                        ForeColor="Black" BorderColor="#00CCFF" BorderStyle="Solid" 
+                        BorderWidth="5px">
+                        <StaticMenuStyle BorderColor="#00CCFF" BorderStyle="Solid" />
+                        <StaticSelectedStyle BorderColor="#00CCFF" />
+                        <StaticMenuItemStyle BorderColor="#00CCFF" BorderStyle="Solid" />
+                        <DynamicMenuStyle BorderColor="#00CCFF" BorderStyle="Solid" />
+                        <DynamicSelectedStyle BorderStyle="Solid" />
+                        <DynamicMenuItemStyle BorderColor="#00CCFF" BorderStyle="Solid" />
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="AboutUs" Value="AboutUs" NavigateUrl="~/AboutUs.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Gallery" Value="Gallery" NavigateUrl="~/Gallery.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="All Packages" Value="All Packages" 
+                                NavigateUrl="~/Kashmirpackage.aspx">
+                                <asp:MenuItem Text="Agra package" Value="Agra package" 
+                                    NavigateUrl="~/AgraPackage.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Jaipur package" NavigateUrl="~/JaipurPackage.aspx" 
+                                    Value="Jaipur package"></asp:MenuItem>
+                                <asp:MenuItem Text="Kashmir package" Value="Kashmir package" 
+                                    NavigateUrl="~/Kashmirpackage.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Manali package" Value="Manali package" 
+                                    NavigateUrl="~/Manalipackage.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Administration" Value="Administration">
+                                <asp:MenuItem Text="Customer Info" Value="Customer Info" 
+                                    NavigateUrl="~/CustomerInfo.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Package Info" Value="Package Info" 
+                                    NavigateUrl="~/PackageInfo.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Booking Details" Value="Booking Details" 
+                                    NavigateUrl="~/BookingDetails.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Registration" Value="Registration" 
+                                NavigateUrl="~/Registration.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ContactUs.aspx" Text="ContactUs" Value="ContactUs">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Feedback.aspx" Text="Feedback" Value="Feedback">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Reports" Value="Reports"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td class="style3">
+                    <asp:Image ID="Image2" runat="server" Height="249px" 
+                        ImageUrl="~/images/Logo/HD5.jpg" Width="1321px" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="style5" style="font-size: 26px; color: #000080;">
+                    Designed and developed by:&nbsp;&nbsp; Shweta Mali&nbsp; &amp; Pooja Bhomannache</td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
